@@ -1,6 +1,8 @@
 'use strict';
 
-const checkAge = age => age > 18 || confirm('Родители разрешили?');
+let age = parseInt(prompt("Введите ваш возраст: "));
 
-console.log(checkAge(20));
-console.log(checkAge(15));
+const checkAge = (age) => age < 18 || confirm("Родители разрешили?");
+const checkAge2 = (age) => (age < 18 ? true : confirm("Родители разрешили?"));
+
+checkAge();
