@@ -1,10 +1,18 @@
 'use strict';
 
-let div = document.querySelector("div");
-console.log(div);
+document.getElementById("clickButton").addEventListener("click", function () {
+    this.style.backgroundColor = "blue";
+    setTimeout(() => this.style.backgroundColor = "", 300);
+});
 
-let ul = document.querySelector("ul");
-console.log(ul);
+document.getElementById("hoverButton").addEventListener("mouseover", function () {
+    this.style.backgroundColor = "red";
+});
+document.getElementById("hoverButton").addEventListener("mouseout", function () {
+    this.style.backgroundColor = "";
+});
 
-let secondLi = document.querySelectorAll("li")[1];
-console.log(secondLi);
+document.getElementById("dblClickButton").addEventListener("dblclick", function () {
+    this.style.backgroundColor = "yellow";
+    setTimeout(() => this.style.backgroundColor = "", 300);
+});

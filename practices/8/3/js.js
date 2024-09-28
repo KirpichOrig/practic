@@ -1,10 +1,20 @@
-'use strict';
+const block = document.getElementById("move__block");
+let topPos = 240;
+let leftPos = 240;
 
-let numberOfBlocks = prompt("Введите количество блоков:", 0);
-numberOfBlocks = parseInt(numberOfBlocks);
+document.addEventListener("keydown", function (event) {
+    const key = event.key.toLowerCase();
 
-for (let i = 0; i < numberOfBlocks; i++) {
-  let block = document.createElement("div");
-  block.textContent = `Блок ${i + 1}`;
-  document.body.appendChild(block);
-}
+    if (key === 'w') {
+        topPos -= 1;
+    } else if (key === 's') {
+        topPos += 1;
+    } else if (key === 'a') {
+        leftPos -= 1;
+    } else if (key === 'd') {
+        leftPos += 1;
+    }
+
+    block.style.top = `${topPos}px`;
+    block.style.left = `${leftPos}px`;
+});

@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <form id="registrationForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name">
+        <div id="nameError" class="error"></div>
+        
+        <br><br>
+        
+        <label for="yearOfBirth">Год рождения:</label>
+        <input type="text" id="yearOfBirth" name="yearOfBirth">
+        <div id="yearError" class="error"></div>
+      
+        <br><br>
+        
+        <button type="submit">Отправить</button>
+      </form>
+
+      <div id="successMessage" class="success"></div>
     <script src="js.js"></script>
 </body>
 </html>
